@@ -1,0 +1,14 @@
+#!/bin/sh
+
+REPODIR=~/git/newsyslog.conf.d
+CONFDIR=/usr/local/etc/newsyslog.conf.d
+
+install -d -m 755 ${CONFDIR}
+
+for i in `ls -1 ${REPODIR}${CONFDIR}` ; do
+    if [ -f     ${REPODIR}${CONFDIR}/${i} ]; then
+        install -m 644 \
+                ${REPODIR}${CONFDIR}/${i} \
+                          ${CONFDIR}/${i}
+    fi
+done
