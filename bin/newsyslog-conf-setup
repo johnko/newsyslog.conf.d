@@ -12,3 +12,11 @@ for i in `ls -1 ${REPODIR}${CONFDIR}` ; do
                           ${CONFDIR}/${i}
     fi
 done
+
+crontabbed
+
+cat > ~/crontabbed/newsyslog_hourly <<EOF
+1 * * * * newsyslog
+EOF
+
+crontabbed
