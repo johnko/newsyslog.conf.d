@@ -18,6 +18,10 @@ for i in `ls -1 ${REPODIR}${CONFDIR}` ; do
     fi
 done
 
+if [ -f /usr/local/etc/newsyslog.conf.d/firefly.conf ]; then
+    rm /usr/local/etc/newsyslog.conf.d/firefly.conf
+fi
+
 crontabbed
 
 cat > ~/crontabbed/newsyslog_hourly <<EOF
