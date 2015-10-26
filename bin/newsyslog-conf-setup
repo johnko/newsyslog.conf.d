@@ -12,13 +12,14 @@ install -d -m 755 ${CONFDIR}
 
 for i in `ls -1 ${REPODIR}${CONFDIR}` ; do
     if [ -f     ${REPODIR}${CONFDIR}/${i} ]; then
-        install -m 644 \
+        install -C -m 644 \
                 ${REPODIR}${CONFDIR}/${i} \
                           ${CONFDIR}/${i}
     fi
 done
 
 if [ -f /usr/local/etc/newsyslog.conf.d/firefly.conf ]; then
+    # we use syslogd instead
     rm /usr/local/etc/newsyslog.conf.d/firefly.conf
 fi
 
