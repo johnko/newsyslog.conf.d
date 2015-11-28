@@ -1,0 +1,8 @@
+# pattern_name    mode    count    size    time    flags    pid_file    signal_number
+# B=binary_log
+# C=create_if_not_exist
+# G=pattern_name
+# J=bzip2
+# N=dont_signal_process
+# Z=gzip
+/var/log/zsnaprune-all.log    644    7    4096    *    CN
