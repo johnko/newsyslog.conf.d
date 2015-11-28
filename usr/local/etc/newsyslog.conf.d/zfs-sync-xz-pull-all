@@ -5,4 +5,4 @@
 # J=bzip2
 # N=dont_signal_process
 # Z=gzip
-/var/log/zfs-sync-xz-pull-all.log    644    7    4096    *    CN
+/var/log/zfs-sync-xz-pull-all.log    urep:urep  644    7    4096    *    CN
