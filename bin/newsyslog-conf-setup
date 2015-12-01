@@ -22,11 +22,3 @@ if [ -f /usr/local/etc/newsyslog.conf.d/firefly.conf ]; then
     # we use syslogd instead
     rm /usr/local/etc/newsyslog.conf.d/firefly.conf
 fi
-
-crontabbed
-
-cat > ~/crontabbed/newsyslog_hourly <<EOF
-1 * * * * newsyslog
-EOF
-
-crontabbed
