@@ -26,6 +26,8 @@ fi
 crontabbed
 
 # already set in /etc/crontab so we can remove
-rm /root/crontabbed/newsyslog_hourly
+if [ -f /root/crontabbed/newsyslog_hourly ]; then
+    rm /root/crontabbed/newsyslog_hourly
+fi
 
 crontabbed
